@@ -17,8 +17,8 @@ pipeline {
                 pwd
                 ls
                 # TODO fill out the path to conda here
-                /Users/rohansaibuddhi/UIC/Sem 4/RAI/Labs/Lab7/venv/bin/pip install -r requirements.txt 
-                /Users/rohansaibuddhi/UIC/Sem 4/RAI/Labs/Lab7/venv/bin/pytest
+                ~/Users/rohansaibuddhi/UIC/Sem 4/RAI/Labs/Lab7/venv/bin/pip install -r requirements.txt 
+                ~/Users/rohansaibuddhi/UIC/Sem 4/RAI/Labs/Lab7/venv/bin/pytest
 
                 echo 'pytest not runned'
                 exit 1 #comment this line after implementing Jenkinsfile
