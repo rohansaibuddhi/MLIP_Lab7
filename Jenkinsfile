@@ -18,8 +18,9 @@ pipeline {
                 echo '\n'
                 which pip
                 # TODO fill out the path to conda here
+                ./venv/bin/python3 -m pip install --upgrade pip
                 ./venv/bin/pip install -r requirements.txt 
-                ~/Users/rohansaibuddhi/UIC/Sem 4/RAI/Labs/Lab7/venv/bin/pytest
+                ./venv/bin/pytest
 
                 echo 'pytest not runned'
                 exit 1 #comment this line after implementing Jenkinsfile
