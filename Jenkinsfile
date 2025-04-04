@@ -7,10 +7,6 @@ pipeline {
                 sh '''#!/bin/bash
                 echo 'In C or Java, we can compile our program in this step'
                 echo 'In Python, we can build our package here or skip this step'
-
-                sudo apt install python3-venv
-                python3 -m venv venv
-                pip install -r requirements.txt
                 '''
             }
         }
@@ -20,10 +16,8 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # TODO fill out the path to conda here
-                source ./venv/bin/activate 
-                which python
-                python --version
-                pytest
+                /Users/rohansaibuddhi/UIC/Sem 4/RAI/Labs/Lab7/venv/bin/pip install -r requirements.txt 
+                /Users/rohansaibuddhi/UIC/Sem 4/RAI/Labs/Lab7/venv/bin/pytest
 
                 echo 'pytest not runned'
                 exit 1 #comment this line after implementing Jenkinsfile
